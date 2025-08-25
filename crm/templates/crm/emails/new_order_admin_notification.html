@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Nouvelle Commande Reçue</h2>
+    <p>Une nouvelle commande (#{{ commande.id }}) a été passée par {{ commande.client.user.email }}.</p>
+    <p><strong>Produit :</strong> {{ commande.produit.nom }}</p>
+    <p><strong>Montant :</strong> {{ commande.montant }} C$</p>
+    <p>Veuillez vous connecter au CRM pour la traiter.</p>
+</body>
+</html>

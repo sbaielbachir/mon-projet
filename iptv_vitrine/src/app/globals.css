@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-text font-sans;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+}
+
+.btn-primary {
+    @apply inline-block bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity duration-300;
+}
+
+.btn-secondary {
+    @apply inline-block bg-transparent border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary hover:text-white transition-colors duration-300;
+}

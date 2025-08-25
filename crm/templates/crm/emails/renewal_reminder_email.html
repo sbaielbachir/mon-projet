@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rappel d'expiration d'abonnement</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f4f4f4;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" style="padding: 20px;">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 8px; border: 1px solid #ddd; overflow: hidden;">
+                    <tr>
+                        <td align="center" style="background-color: #007bff; padding: 20px;">
+                            <h2 style="color: #ffffff; margin: 0;">Rappel d'Expiration</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 30px 20px;">
+                            <p style="font-size: 16px;">Bonjour {{ abonnement.client.user.first_name }},</p>
+                            <p style="font-size: 16px; line-height: 1.5;">Ceci est un rappel amical pour vous informer que votre abonnement <strong>{{ abonnement.produit.nom }}</strong> est sur le point d'expirer.</p>
+                            <p style="font-size: 18px; margin: 30px 0; text-align: center; background-color: #f0f0f0; padding: 15px; border-radius: 5px;">
+                                <strong>Date d'expiration :</strong> {{ abonnement.date_fin|date:"d F Y" }}
+                            </p>
+                            <p style="font-size: 16px; line-height: 1.5;">Pour éviter toute interruption de service, nous vous invitons à renouveler votre abonnement dès maintenant.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 0 20px 30px 20px;">
+                            <a href="{{ renewal_url }}" style="background-color: #28a745; color: #ffffff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">Renouveler mon abonnement</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 20px; text-align: center; font-size: 12px; color: #888; background-color: #f4f4f4;">
+                            <p style="margin: 0;">Merci de votre confiance.</p>
+                            <p style="margin: 5px 0 0 0;">L'équipe IPTV Fasty</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

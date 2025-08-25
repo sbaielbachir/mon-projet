@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nouvelle Demande d'Affiliation</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; padding: 0; color: #333;">
+    <h2>Nouvelle Demande d'Affiliation</h2>
+    <p>Bonjour Admin,</p>
+    <p>Le client suivant souhaite rejoindre le programme d'affiliation :</p>
+    <ul>
+        <li><strong>Nom d'utilisateur :</strong> {{ client.user.username }}</li>
+        <li><strong>Nom complet :</strong> {{ client.user.first_name }} {{ client.user.last_name }}</li>
+        <li><strong>Email :</strong> {{ client.user.email }}</li>
+        <li><strong>Téléphone :</strong> {{ client.telephone|default:"Non fourni" }}</li>
+        <li><strong>Client depuis le :</strong> {{ client.date_creation|date:"d/m/Y" }}</li>
+    </ul>
+    <p>Vous pouvez créer son compte affilié depuis le panneau d'administration CRM.</p>
+    <p>Cordialement,<br>Votre système IPTV</p>
+</body>
+</html>

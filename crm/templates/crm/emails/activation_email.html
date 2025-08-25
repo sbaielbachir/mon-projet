@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Votre abonnement IPTV Fasty est activé !</h2>
+    <p>Bonjour {{ abonnement.client.user.first_name }},</p>
+    <p>Bonne nouvelle ! Votre commande a été approuvée et votre abonnement "{{ abonnement.produit.nom }}" est maintenant actif.</p>
+    <p><strong>Détails de connexion :</strong></p>
+    <pre>{{ abonnement.details_connexion }}</pre>
+    <p>Vous pouvez retrouver ces informations et gérer votre compte dans votre espace client.</p>
+</body>
+</html>
